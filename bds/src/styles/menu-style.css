@@ -1,0 +1,375 @@
+
+
+body{
+    display: flex;
+    position: absolute;
+    min-height: 100vh;
+    background: url("../img/bg2.jpg");
+    background-size: auto;
+    background-position: center;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    height: fit-content ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    
+}
+
+.logo{
+    user-select: none; 
+}
+
+.navigation a{
+    position: relative;
+    font-size: 20px;
+    color:red;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: red ;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.btnlogin-home, .btnreg-home, .btnlogout{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid red;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .5s;
+
+}
+
+.btnlogin-home:hover, .btnreg-home:hover, .btnlogout:hover{
+    background: red;
+    color: black;
+
+}
+
+.propic{
+    position: absolute;
+    left: 1250px;
+    top: -25px;
+}
+.btnlogout{
+    position: absolute;
+    top: 35px;
+    height: 40px;
+    left: -10px;
+}
+
+/*------------------------------------------------------------------------------*/
+
+.body1{
+    position: relative;
+    top: 110px;
+}
+
+h1{
+    position: relative;
+    left: 100px;
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: #4c0505;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+}
+
+table{
+    position: relative;
+    left: 100px;
+    justify-content: center;
+    color: white;
+    background-color: white;
+    align-items: center;
+    width: 1300px;
+    height: 600px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+table td{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+table a{
+    text-decoration: none;
+    background-color: #ff8a8a;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+
+}
+
+table a:hover, table a:focus, table a:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    color: black;
+}
+
+
+
+
+/*------------------------------------------------------------------------------*/
+footer{
+    position: absolute;
+    width: 115.2%;
+    background: #960018;
+    height: 130px;
+    top: 1000px;
+    left: -10px;
+    justify-content: space-between;
+    padding: 50px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+
+}
+
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("../img/wave.png");
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0px;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_2 4s linear infinite;
+}
+
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_2 3s linear infinite;
+}
+
+@keyframes animateWave{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+
+}
+
+@keyframes animateWave_2{
+    0%
+    {
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+
+}
+
+ footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: raw;
+ }
+
+ .sec{
+     margin-right: 30px;
+
+ }
+
+.aboutus{
+    width: 40%;
+    position: relative;
+    bottom: 70px;
+    left: 10px;
+ }
+
+ h2{
+    position: relative;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+ }
+
+h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: black;
+ }
+
+ footer p{
+    color: #999;
+ }
+
+ .sci{
+    margin-top: 20px;
+    display: flex;
+
+ }
+
+ .sci li{
+    list-style: none;
+ }
+
+ .sci li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+
+ }
+
+ .sci li a:hover{
+    background: #f00;
+    font-size: 20px;
+ 
+}
+
+.quicklinks{
+    position: relative;
+    width: 25%;
+    bottom: 60px;
+    right: 50px;
+
+}
+
+.quicklinks ul li{
+    list-style: none;
+}
+
+.quicklinks ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.quicklinks ul li a:hover{
+    color: wheat;
+}
+
+.contact{
+    position: relative;
+    bottom: 60px;
+    right: 40px;
+}
+
+.info{
+    position: relative;
+}
+
+.info li {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.info li span:nth-child(1){
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+
+}
+
+.info li span{
+    color: #999;
+}
+
+.info li a{
+    color: #999;
+    text-decoration: none;
+}
+
+.info li a:hover{
+    color: wheat;
+}
+
+.copyright{
+    position: relative;
+    bottom: 70px;
+    width: 100%;
+    background: rgb(52, 2, 2);
+    padding: 8px 100px;
+    text-align: center;
+    color: #999;
+}

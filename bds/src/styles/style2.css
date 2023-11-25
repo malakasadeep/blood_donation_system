@@ -1,0 +1,121 @@
+
+
+
+
+/*------------------------------------------------------------------------------*/
+
+.background{
+    
+    background: url("../img/bg1.jpg");
+} 
+.fBack{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+h1{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: left;
+    color: #2f4f4f;
+    border-bottom: 3px solid silver;
+}
+
+
+.fBack hr{
+    width: 100%;
+}
+
+.fBack input[type=submit]{
+    height: 45px;
+    width: 90px;
+    border-color: grey;
+    color: white;
+    background-color: rgb(198, 45, 139);
+}
+
+
+label{
+    width: 95%;
+    color: #2f4f4f;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+input{
+    height: 40px;
+    width: 300px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.blg{
+    height: 40px;
+    width: 300px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+
+}
+
+textarea{
+    height: 130px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.link a{
+    position: relative;
+    left: 500px;
+    top: -25px;
+    text-decoration: none;
+    background-color: #ff8a8a;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+
+}
+
+.link a:hover, .link a:focus, .link a:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    color: black;
+}
+ button{
+    width: 300px;
+    height: 35px;
+    margin-top: 10px;
+    display: block;
+    color: wheat;
+    border: #f00;
+    border-radius: 10px;
+    background-image: linear-gradient(to right , #D21F3C, #960018);
+}
+ button:hover{
+    background-image: linear-gradient(to right , #960018, #D21F3C);
+}
+
+.app-img{
+    position: absolute;
+    left: 700px;
+    top: 40px;
+}
+
+/*------------------------------------------------------------------------------*/

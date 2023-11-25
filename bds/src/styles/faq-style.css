@@ -1,0 +1,373 @@
+
+
+body{
+    display: flex;
+    position: absolute;
+    min-height: 100vh;
+    background: url("../img/bg2.jpg") ;
+    background-size: auto;
+    background-position: center;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    top: 20px;
+    left: 70px;
+    height: fit-content ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    
+}
+
+.logo{
+    user-select: none; 
+}
+
+.navigation a{
+    position: relative;
+    font-size: 20px;
+    color:red;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: red ;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.btnlogin-home, .btnreg-home, .btnlogout{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid red;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .5s;
+
+}
+
+.btnlogin-home:hover, .btnreg-home:hover, .btnlogout:hover{
+    background: red;
+    color: black;
+
+}
+
+.propic{
+    position: absolute;
+    left: 1250px;
+    top: -25px;
+}
+.btnlogout{
+    position: absolute;
+    top: 75px;
+    height: 40px;
+}
+
+/*------------------------------------------------------------------------------*/
+.faq{
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    color: red;
+    font-family: sans-serif;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    position: absolute;
+    top: 300px;
+    left: 445px;
+    width: 500px;
+  }
+  
+  form {
+    color: #555;
+    display: flex;
+    padding: 2px;
+    border: 1px solid currentColor;
+    border-radius: 5px;
+    margin: 0 0 30px;
+  }
+  
+  input[type="search"] {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+  }
+  
+  button[type="submit"]:focus,
+  input[type="search"]:focus {
+    box-shadow: 0 0 3px 0 #1183d6;
+    border-color: #1183d6;
+    outline: none;
+  }
+  
+  form.nosubmit {
+   border: none;
+   padding: 0;
+  }
+
+  input.nosubmit {
+    border: 1px solid #555;
+    width: 100%;
+    padding: 9px 4px 9px 40px;
+     background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+  }
+
+.img-faq{
+    position: absolute;
+    top: 400px;
+    left: 250px;
+}
+
+/*------------------------------------------------------------------------------*/
+footer{
+    position: absolute;
+    width: 109%;
+    background: #960018;
+    height: 130px;
+    top: 1000px;
+    left: -10px;
+    justify-content: space-between;
+    padding: 50px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+
+}
+
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("../img/wave.png");
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0px;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_2 4s linear infinite;
+}
+
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_2 3s linear infinite;
+}
+
+@keyframes animateWave{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+
+}
+
+@keyframes animateWave_2{
+    0%
+    {
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+
+}
+
+ footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: raw;
+ }
+
+ .sec{
+     margin-right: 30px;
+
+ }
+
+.aboutus{
+    width: 40%;
+    position: relative;
+    bottom: 70px;
+    left: 10px;
+ }
+
+ h2{
+    position: relative;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+ }
+
+h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: black;
+ }
+
+ footer p{
+    color: #999;
+ }
+
+ .sci{
+    margin-top: 20px;
+    display: flex;
+
+ }
+
+ .sci li{
+    list-style: none;
+ }
+
+ .sci li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+
+ }
+
+ .sci li a:hover{
+    background: #f00;
+    font-size: 20px;
+ 
+}
+
+.quicklinks{
+    position: relative;
+    width: 25%;
+    bottom: 60px;
+    right: 50px;
+
+}
+
+.quicklinks ul li{
+    list-style: none;
+}
+
+.quicklinks ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.quicklinks ul li a:hover{
+    color: wheat;
+}
+
+.contact{
+    position: relative;
+    bottom: 60px;
+    right: 40px;
+}
+
+.info{
+    position: relative;
+}
+
+.info li {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.info li span:nth-child(1){
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+
+}
+
+.info li span{
+    color: #999;
+}
+
+.info li a{
+    color: #999;
+    text-decoration: none;
+}
+
+.info li a:hover{
+    color: wheat;
+}
+
+.copyright{
+    position: relative;
+    bottom: 70px;
+    width: 100%;
+    background: rgb(52, 2, 2);
+    padding: 8px 100px;
+    text-align: center;
+    color: #999;
+}

@@ -1,0 +1,415 @@
+
+
+body{
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    background: url("../img/bg2.jpg") ;
+    background-size: auto;
+    background-position: center;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    height: fit-content ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    
+}
+
+.logo{
+    user-select: none; 
+}
+
+.navigation a{
+    position: relative;
+    font-size: 20px;
+    color:red;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: red ;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.btnlogin-home, .btnreg-home{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid red;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .5s;
+
+}
+
+.btnlogin-home:hover, .btnreg-home:hover{
+    background: red;
+    color: black;
+
+}
+
+.b1{
+    position: relative;
+    top: 50px;
+    right: 1433px;
+}
+
+.slider{
+    width: 1500px;
+    height: 350px;
+    position: absolute;
+    top: 0px;
+    left: 1432px;
+    background: url("../img/banner1.png");
+    background-size: cover;
+    background-position: center;
+    margin: 100px auto;
+    animation: slide 20s infinite;
+
+}
+
+@keyframes slide{
+    
+    50%{
+        
+        background: url("../img/banner2.png");
+        background-size: cover;
+        background-position: center;
+    }
+    100%{
+        
+        background: url("../img/banner1.png");
+        background-size: cover;
+        background-position: center;
+    }
+    
+}
+
+.b2{
+
+    position: relative;
+    top: 520px;
+}
+
+.table-home{
+    color: black;
+    font-style: italic;
+    font-family: sans-serif;
+    width: 1500px;
+}
+
+th{
+    font-size: 40px;
+}
+
+.list-home{
+    font-style: oblique;
+    color: black;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    list-style-image: url("../img/bullot2.png" );
+       
+}   
+
+.li-home{
+    color: rgb(221, 45, 45);
+    font-size: 22px;
+}
+.td{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+}
+
+.tobeadonor-btn{
+    position: relative;
+    left: 450px;
+    display: inline-block;
+    font-size: 50px;
+    letter-spacing: .1em;
+    color: #FF3131 ;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #FF3131;
+    padding: 10px 30px;
+    overflow: hidden;
+    transition: 1s;
+    transition-delay: 0s, 1s;
+
+}
+
+.tobeadonor-btn:hover{
+    color: white;
+    box-shadow: 
+    0 0 10px #FF3131,
+    0 0 20px #FF3131,
+    0 0 40px #FF3131,
+    0 0 80px #FF3131,
+    0 0 160px #FF3131;
+}
+
+.tobeadonor-btn::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: #FF3131;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 1s;
+}
+
+.tobeadonor-btn:hover:before{
+    width: 100%;
+}
+
+footer{
+    position: absolute;
+    width: 101.4%;
+    background: #960018;
+    height: 130px;
+    top: 800px;
+    left: -10px;
+    justify-content: space-between;
+    padding: 50px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+
+}
+
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("../img/wave.png");
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0px;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_2 4s linear infinite;
+}
+
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_2 3s linear infinite;
+}
+
+@keyframes animateWave{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+
+}
+
+@keyframes animateWave_2{
+    0%
+    {
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+
+}
+
+ footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: raw;
+ }
+
+ .sec{
+     margin-right: 30px;
+
+ }
+
+.aboutus{
+    width: 40%;
+    position: relative;
+    bottom: 70px;
+    left: 10px;
+ }
+
+ h2{
+    position: relative;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+ }
+
+h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: black;
+ }
+
+ footer p{
+    color: #999;
+ }
+
+ .sci{
+    margin-top: 20px;
+    display: flex;
+
+ }
+
+ .sci li{
+    list-style: none;
+ }
+
+ .sci li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+
+ }
+
+ .sci li a:hover{
+    background: #f00;
+    font-size: 20px;
+ 
+}
+
+.quicklinks{
+    position: relative;
+    width: 25%;
+    bottom: 60px;
+    right: 50px;
+
+}
+
+.quicklinks ul li{
+    list-style: none;
+}
+
+.quicklinks ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.quicklinks ul li a:hover{
+    color: wheat;
+}
+
+.contact{
+    position: relative;
+    bottom: 60px;
+    right: 40px;
+}
+
+.info{
+    position: relative;
+}
+
+.info li {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.info li span:nth-child(1){
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+
+}
+
+.info li span{
+    color: #999;
+}
+
+.info li a{
+    color: #999;
+    text-decoration: none;
+}
+
+.info li a:hover{
+    color: wheat;
+}
+
+.copyright{
+    position: relative;
+    bottom: 70px;
+    width: 100%;
+    background: rgb(52, 2, 2);
+    padding: 8px 100px;
+    text-align: center;
+    color: #999;
+}
